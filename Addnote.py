@@ -2,12 +2,6 @@ import json
 import datetime
 import Id as i
 
-# def counter_note():
-#     global id
-#     id += 1
-#     return id
-# id = 0
-
 def save_note_file(heading, msg):
     date_note = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     id = i.counts()
