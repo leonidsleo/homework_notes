@@ -25,7 +25,7 @@ def main():
         elif team == 6:
             s.search_note_heading()
         elif team == 7:
-            break   
+            return   
         else:
             print(f"Неизвестная команда: {team}")
 

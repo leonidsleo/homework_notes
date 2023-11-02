@@ -1,15 +1,16 @@
 import json
 import datetime
+import Id as i
 
-id = 1
-def counter_note():
-    global id
-    id += 1
-    return id
+# def counter_note():
+#     global id
+#     id += 1
+#     return id
+# id = 0
 
 def save_note_file(heading, msg):
     date_note = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    id = counter_note()
+    id = i.counts()
     note = {
         'id' : id,
         'заголовок': heading,
@@ -25,5 +26,6 @@ def new_note_fail():
     msg = input("Введите текст заметки: ")
     save_note_file(heading, msg)
     print("Заметка успешно сохранена")
+    
 
 file_note = "notes.json" 

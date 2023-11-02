@@ -12,5 +12,8 @@ def data_filter_notes():
                 n = json.loads(f.strip())
                 if n['дата_заметки'].startswith(filter_data):
                     print(f"Дата: {n['дата_заметки']}, ID: {n['id']}, Заголовок: {n['заголовок']}, Заметка: {n['заметка']}, Дата: {n['дата_заметки']}")
+                else:
+                    print("Заметок на эту дату нет!")
+                    break
     except FileExistsError:
-        print("Заметок на эту дату нет!")
+        print("Заметок нет!")
