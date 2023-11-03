@@ -1,4 +1,3 @@
-# from Addnote import file_note
 import Addnote as a
 import json
 
